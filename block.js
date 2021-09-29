@@ -1,7 +1,7 @@
-import { GENESIS_DATA } from "./config";
-import cryptoHash from "./crypto-hash";
+import { GENESIS_DATA } from "./config.js";
+import cryptoHash from "./crypto-hash.js";
 
-export class Block {
+export default class Block {
   constructor({ timestamp, lastHash, hash, data }) {
     this.timestamp = timestamp;
     this.lastHash = lastHash;

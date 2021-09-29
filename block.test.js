@@ -1,4 +1,4 @@
-import { Block } from "./block";
+import  Block  from "./block";
 import { GENESIS_DATA } from "./config";
 import cryptoHash from "./crypto-hash";
 
