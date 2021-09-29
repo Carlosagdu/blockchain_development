@@ -9,5 +9,3 @@ const cryptoHash = (...inputs) =>{
 }
 
 export default cryptoHash;
-
-//test new comit
