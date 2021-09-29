@@ -26,7 +26,7 @@ describe("Block", () => {
     });
   });
 
-  describe("mineBlock()", () => {
+  describe("minedBlock()", () => {
     const lastBlock = Block.genesis();
     const data = {
       sender: "second sender",
