@@ -11,5 +11,3 @@ export default class Blockchain {
     this.chain.push(newBlock);
   }
 }
-
-console.log('blockchain file was executed')
