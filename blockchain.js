@@ -34,11 +34,11 @@ export default class Blockchain {
     for (let i = 1; i < chain.length; i++) {
       let Block = chain[i];
       let actualLastHash = chain[i - 1].hash;
-      const { timestamp, lastHash, hash, data } = Block;
+      const { timestamp, lastHash, hash, nonce, difficulty ,data } = Block;
 
       if (lastHash !== actualLastHash) return false;
 
-      const validatedHash = cryptoHash(timestamp, lastHash, data);
+      const validatedHash = cryptoHash(timestamp, lastHash, data, nonce, difficulty);
 
       if(hash !== validatedHash) return false;
     }
