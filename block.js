@@ -1,4 +1,4 @@
-import { GENESIS_DATA } from "./config.js";
+import { GENESIS_DATA, MINE_RATE } from "./config.js";
 import cryptoHash from "./crypto-hash.js";
 
 export default class Block {
@@ -36,5 +36,13 @@ export default class Block {
       nonce,
       hash,
     });
+  }
+
+  static adjustDifficulty({ originalBlock, timestamp }) {
+    const { difficulty } = originalBlock;
+
+    if (timestamp - originalBlock.timestamp > MINE_RATE) return difficulty - 1;
+
+    return difficulty + 1;
   }
 }
